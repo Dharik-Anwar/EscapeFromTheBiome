@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/spider walking.wav-35b0bc0fd233e634590e5b29ca5204ef.sample"
+
+[deps]
+
+source_file="res://Assets/spider walking.wav"
+dest_files=[ "res://.import/spider walking.wav-35b0bc0fd233e634590e5b29ca5204ef.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Polar Bear Grunt.wav-6c4370d52b1a803376478d0972809dd8.sample"
+
+[deps]
+
+source_file="res://Assets/Polar Bear Grunt.wav"
+dest_files=[ "res://.import/Polar Bear Grunt.wav-6c4370d52b1a803376478d0972809dd8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

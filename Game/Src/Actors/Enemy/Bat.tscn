@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Src/Actors/Enemy/Bat.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Bats.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Bats_2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/bats wings.wav" type="AudioStream" id=4]
+
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Flying",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 20.0
+height = 80.0
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 21.0
+height = 80.0
+
+[node name="Bat" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 1033
+script = ExtResource( 1 )
+speed = Vector2( 600, 0 )
+gravity = 0.0
+
+[node name="bat" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.2, 0.125 )
+frames = SubResource( 1 )
+animation = "Flying"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+modulate = Color( 0, 1, 0, 1 )
+position = Vector2( 0, 18 )
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+modulate = Color( 0, 1, 0, 1 )
+position = Vector2( 9.69788, 0.961785 )
+rotation = 1.91986
+scale = Vector2( 4.98389, 1.74966 )
+rect = Rect2( -10, -50, 20, 100 )
+process_parent = true
+physics_process_parent = true
+
+[node name="KillDetector" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillDetector"]
+modulate = Color( 0, 1, 0, 1 )
+position = Vector2( 0, 18 )
+rotation = 1.5708
+shape = SubResource( 3 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+[connection signal="area_entered" from="KillDetector" to="." method="_on_KillDetector_area_entered"]
+[connection signal="body_entered" from="KillDetector" to="." method="_on_KillDetector_body_entered"]

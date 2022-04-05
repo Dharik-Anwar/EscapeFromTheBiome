@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Src/UserInterface/QuitButton.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 1, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.32549, 0.364706, 0.360784, 1 )
+
+[node name="QuitButton" type="Button"]
+margin_left = 3.36359
+margin_top = -23.5451
+margin_right = 203.364
+margin_bottom = 76.4549
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Quit"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="." to="." method="_on_button_up"]

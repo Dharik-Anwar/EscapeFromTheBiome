@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Main_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Src/UserInterface/SceneChangeButton.tscn" type="PackedScene" id=2]
+
+[node name="Page06" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -208.5
+margin_right = 208.5
+margin_bottom = 100.0
+text = "Instructions"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -960.0
+margin_top = -980.0
+margin_right = 960.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "You can use your gun to shoot by pressing 'E' key.
+
+But your gun is not ina  good condition too.
+It  is only going to shoot one bullet at a time.
+
+You only have limited number of bullets. But 
+more can be found in the map
+
+The bullets can able to deal 50 HP to the monsters.
+
+The bullets can only reach upto the red point.
+
+               Instant Firing will let you lose bullets."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitButton" parent="." instance=ExtResource( 2 )]
+margin_right = 260.0
+text = "Exit"
+next_scene = "res://Src/Screens/MainScreen.tscn"
+
+[node name="BackButton" parent="." instance=ExtResource( 2 )]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -100.0
+margin_right = 260.0
+margin_bottom = 0.0
+text = "Back"
+next_scene = "res://Src/Instructions/Page05.tscn"
+
+[node name="NextButton" parent="." instance=ExtResource( 2 )]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -260.0
+margin_top = -100.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Next"
+next_scene = "res://Src/Instructions/Page07.tscn"

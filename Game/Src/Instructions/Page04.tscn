@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Main_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Src/UserInterface/SceneChangeButton.tscn" type="PackedScene" id=2]
+
+[node name="Page04" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -208.5
+margin_right = 208.5
+margin_bottom = 100.0
+text = "Instructions"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -960.0
+margin_top = -980.0
+margin_right = 960.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "
+About the Monster:
+
+1. GIANT BATS: They have 50 HP and
+give you 20 points.
+
+2. DEADLY SPIDERS: They have 100 HP and
+give you 30 points.
+
+3. POLAR BEARS: They have 100 HP and
+give you 30 points.
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitButton" parent="." instance=ExtResource( 2 )]
+margin_right = 260.0
+text = "Exit"
+next_scene = "res://Src/Screens/MainScreen.tscn"
+
+[node name="BackButton" parent="." instance=ExtResource( 2 )]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -100.0
+margin_right = 260.0
+margin_bottom = 0.0
+text = "Back"
+next_scene = "res://Src/Instructions/Page03.tscn"
+
+[node name="NextButton" parent="." instance=ExtResource( 2 )]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -260.0
+margin_top = -100.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Next"
+next_scene = "res://Src/Instructions/Page05.tscn"

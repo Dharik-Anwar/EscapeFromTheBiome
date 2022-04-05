@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/199266__stumber__diamond-clap-05.wav-33e8a86463939600058fd50b849a978b.sample"
+
+[deps]
+
+source_file="res://Assets/199266__stumber__diamond-clap-05.wav"
+dest_files=[ "res://.import/199266__stumber__diamond-clap-05.wav-33e8a86463939600058fd50b849a978b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
